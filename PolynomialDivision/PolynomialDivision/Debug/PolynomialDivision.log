@@ -1,0 +1,3 @@
+﻿  PolynomialDivision.cpp
+c:\users\user\desktop\polynomial_division_in_c\polynomialdivision\polynomialdivision\dividealgoritham.h(96): warning C4715: 'Divide': not all control paths return a value
+  PolynomialDivision.vcxproj -> C:\Users\User\Desktop\Polynomial_Division_In_C\PolynomialDivision\Debug\PolynomialDivision.exe
