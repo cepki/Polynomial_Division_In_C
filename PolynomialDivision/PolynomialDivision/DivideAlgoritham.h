@@ -10,8 +10,6 @@
 
 int Divide(float *dividend, int maxDegreeOfDividend, float *divider, int maxDegreeOfDivider, float *result, int maxDegreeOfResult)
 {
-	//_printOutPolynomial(result, maxDegreeOfDividend);
-
 	int lastKnownMaxDegreeOfDividend = maxDegreeOfDividend;
 	maxDegreeOfResult = lastKnownMaxDegreeOfDividend - maxDegreeOfDivider;
 

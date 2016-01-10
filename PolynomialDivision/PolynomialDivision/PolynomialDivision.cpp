@@ -19,8 +19,8 @@ int main()
 	/*maxDegreeOfDividend = _readMaxDegree(true);
 	maxDegreeOdDivider = _readMaxDegree(false);*/
 
-	maxDegreeOfDividend = 3;
-	maxDegreeOdDivider = 1;
+	maxDegreeOfDividend = 4;
+	maxDegreeOdDivider = 2;
 
 
 	dividend = (float *)malloc(sizeof(float) * (maxDegreeOfDividend + 1));
@@ -29,20 +29,20 @@ int main()
 	//maxDegreeOfDividend = _readPolynom(dividend, true, maxDegreeOfDividend);
 	//maxDegreeOdDivider = _readPolynom(divider, false, maxDegreeOdDivider);
 
-	//dividend[4] = 8;
-	dividend[3] = 3;
-	dividend[2] = -5;
-	dividend[1] = 10;
-	dividend[0] = -3;
+	dividend[4] = 3;
+	dividend[3] = 2;
+	dividend[2] = 2;
+	dividend[1] = 1;
+	dividend[0] = 1;
 	
-	//divider[2] = 3;
-	divider[1] = 3;
+	divider[2] = 1;
+	divider[1] = 1;
 	divider[0] = 1;
 
-	/*printf("Dividend\n");
-	_printOutPolynomial(dividend, maxDegreeOfDividend);
+	printf("Dividend\n");
+	PrintOutPolynomial(dividend, maxDegreeOfDividend);
 	printf("Divider\n");
-	_printOutPolynomial(divider, maxDegreeOdDivider);*/
+	PrintOutPolynomial(divider, maxDegreeOdDivider);
 
 	maxDegreeOfResult = maxDegreeOfDividend - maxDegreeOdDivider;
 	result = (float *)malloc(sizeof(int) * (maxDegreeOfResult + 1));
