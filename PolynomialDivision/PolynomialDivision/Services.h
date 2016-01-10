@@ -6,3 +6,15 @@ void _printfNewLine()
 {
 	printf("\n");
 }
+
+float absValue(float number)
+{
+	if (number >= 0)
+	{
+		return number;
+	}
+	else
+	{
+		return -(number);
+	}
+}

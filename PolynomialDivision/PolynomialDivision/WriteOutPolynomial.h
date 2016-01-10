@@ -20,7 +20,7 @@ void PrintOutPolynomial(float *polynomial, int maxDegreeOfPolynomial) //not appr
 				printf(" - %g", -(polynomial[0]));
 			}
 		}
-		else if (polynomial[i] >= 0) 
+		else if (polynomial[i] > 0) 
 		{
 			printf(" + %gx^%d", polynomial[i], i);
 		}
@@ -64,13 +64,21 @@ void PrintOutResoultPolynomial(float* dividend, float* divider, float* result, i
 	}
 
 
-
-	printf(" + (");
+	printf(" + [ ");
+	printf(" (");
 	for (int i = lastKnowsValue; i >= 0; i--)
 	{
 		if (i == lastKnowsValue)
 		{
-			printf("%gx^%d ", dividend[i], i);
+			if (i == 0)
+			{
+				printf("%g ", dividend[i]);
+			}
+			else
+			{
+				printf("%gx^%d ", dividend[i], i);
+			}
+			
 		}
 		else if (i == 0)
 		{
@@ -94,19 +102,19 @@ void PrintOutResoultPolynomial(float* dividend, float* divider, float* result, i
 	}
 	printf(") / ");
 
-	/*for (int i = lastKnowsValue; i >= 0; i--)
-	{
-
-		printf("%gx^%d +", dividend[i], i);
-	}
-*/
-
 	printf("(");
 	for (int i = maxDegreeOfDivider; i >= 0; i--)
 	{
 		if (i == maxDegreeOfDivider)
 		{
-			printf("%gx^%d ", divider[i], i);
+			if (i == 0)
+			{
+				printf("%g ", divider[i]);
+			}
+			else
+			{
+				printf("%gx^%d ", divider[i], i);
+			}
 		}
 		else if (i == 0)
 		{
@@ -129,6 +137,6 @@ void PrintOutResoultPolynomial(float* dividend, float* divider, float* result, i
 		}
 	}
 	printf(")");
+	printf(" ]");
 	_printfNewLine();
-	printf("KRAJ");
 }
